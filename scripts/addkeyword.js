@@ -9,6 +9,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('.addkeywordform').submit(function(e){
         var datasagar;
+        var monitored_keywords_exploded=[];
         e.preventDefault();
         datasagar = $(".addkeywordform").serializeArray();
         $.ajax({
@@ -17,8 +18,12 @@ $(document).ready(function(){
             data: datasagar,
             dataType: 'json',
             success: function(info){
+            if(info['monitored_keyword']!=null){
                 var monitored_keywords=info['monitored_keyword'];
-                var monitored_keywords_exploded=monitored_keywords.split(',');
+                monitored_keywords_exploded=monitored_keywords.split(',');
+            }
+            
+          
                 var entered_keywords=datasagar[0].value;
                 
                 var entered_keywords_wlc;

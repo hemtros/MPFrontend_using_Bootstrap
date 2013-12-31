@@ -12,6 +12,7 @@
      <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
      <script type="text/javascript" src="scripts/bootstrap.js"></script>
      <script type="text/javascript" src="scripts/myscript.js"></script>
+     <script type="text/javascript" src="scripts/retrievekeywordinfo.js"></script>
 
 </head>
 
@@ -20,7 +21,10 @@
         
         <div class="row banner">
             <div class="col-md-2">
+<!--
                 <img src="images/logo.png" />
+-->
+                <img src="images/Monitoring-icon128x128.png" />
             </div>
             <div class="col-md-10">
                 <h1 id="websiteheading">Product Monitoring Service</h1>
@@ -62,14 +66,14 @@
             </div>
             <div class="col-xs-10 content">
                 <div class="input-group search" >
-                  <input type="text" class="form-control" placeholder="Enter a word to know its sentiment"/> 
+                  <input type="text" class="form-control" id="indexinput" placeholder="Enter a word to know its sentiment"/> 
                   <span class="input-group-btn">
                     <button class="btn btn-default" type="button" id="indexgo">Go!</button>
                   </span>
                 </div><!-- /input-group -->
                 <p id="indexpage_showinfo">
-                    
                 </p>
+                
             </div>
         </div>
         

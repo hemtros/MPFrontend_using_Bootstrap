@@ -31,7 +31,7 @@ if(!$_SESSION['username']){
         
         <div class="row banner">
             <div class="col-md-2">
-                <img src="images/logo.png" />
+                <img src="images/Monitoring-icon128x128.png" />
             </div>
             <div class="col-md-10">
                 <h1 id="websiteheading">Product Monitoring Service</h1>
