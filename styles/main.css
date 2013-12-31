@@ -112,6 +112,15 @@ body{
         
 }
 
+p#indexpage_showinfo{
+    border:2px solid red;
+    position:relative;
+    top:65%;
+    left:25%;
+    width:43%;
+    overflow:auto;
+}
+
 .ccodediv{
      position: relative;
     top:50%;
@@ -132,5 +141,14 @@ body{
 .container{
     padding-left: 8px;
     padding-right: 8px;
+}
+
+.nav.nav-pills{
+    min-height:30px;
+}
+
+ul#navigbar li a{
+    padding-top:7px;
+    padding-bottom:7px;
 }
 

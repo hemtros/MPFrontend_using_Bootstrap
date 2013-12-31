@@ -33,7 +33,7 @@
               
                  <ul class="nav nav-pills" id="navigbar">
                       <li class="myactive"><a href="#">Home</a></li>
-                      <li><a href="login_page.php">Monitor</a></li>
+                      <li><a href="#">Monitor</a></li>
                       <li><a href="#">Support</a></li>
                        <li><a href="#">About Us</a></li>
                 </ul>
@@ -61,14 +61,8 @@
                 </div>
             </div>
             <div class="col-xs-10 content">
-                <div class="input-group search" >
-                  <input type="text" class="form-control" placeholder="Enter a word to know its sentiment"/> 
-                  <span class="input-group-btn">
-                    <button class="btn btn-default" type="button" id="indexgo">Go!</button>
-                  </span>
-                </div><!-- /input-group -->
-                <p id="indexpage_showinfo">
-                    
+                <p>
+                    Login failed. Wrong username or password
                 </p>
             </div>
         </div>

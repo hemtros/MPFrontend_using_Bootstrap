@@ -1,0 +1,118 @@
+div#greeting{
+    height:30px;
+    background-color: #0099CC;
+    width: 100%;
+    padding-left:0px;
+    padding-right:0px;
+}
+
+div.col-xs-10{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.sidebar .sidenav{
+	margin-bottom: 1px;
+	text-align: center;
+	padding-top: 4%;
+	height:40px;
+	background-color: #EAE2B4;
+	font-size: 1.2em;
+}
+
+.sidebar .sidenav:hover{
+	background-color: #E5E5E5;
+	text-decoration: none;
+	display: block;
+
+}
+
+div.addkeyworddiv{
+     position:absolute;
+    top: 25%;
+    left:15%;
+    width:35%;
+}
+
+#showinfo{
+    text-align:center;
+}
+
+#showinfo1{
+    text-align:center;
+}
+
+div.showmonwords{
+    position:relative;
+    top:20%;
+    left:6%;
+    width:350px;
+}
+
+ul.monwordstable{
+    border: 1px solid #0a708e;
+    width: 300px;
+    list-style:none;
+    padding-left:0px;
+    font-size:1.3em;
+}
+.monwordstable li{
+    background-color: #4fa2ad;
+   // border-bottom: 2px dotted teal;
+    color:white;
+}
+
+.monwordstable li{
+    display:block;
+    color:white;
+    text-decoration:none;
+}
+
+.monwordstable li:hover{
+    display:block;
+    background-color:#35b5b5;
+    color:black;
+    text-align:center;
+    text-decoration:none;
+    font-family: cursive;
+    cursor:hand;
+    cursor:pointer;
+}
+
+
+
+.keywordsinfo{
+    width:52%;
+    height: 75%;
+    float:right;
+    //border: 10px solid teal;
+    text-align:center;
+   
+    
+}
+
+.keywordsinfo .shortinfo{
+    position:relative;
+    top:20%;
+    left:20%;
+}
+
+.keywordsinfo strong{
+    font-size: 1.5em;
+}
+
+div#startmonitoring{
+    float:right;
+    position:relative;
+    top:18%;
+    width:34%;
+    overflow:auto;
+    
+}
+
+p#showinfo1{
+   // border: 2px solid red;
+    text-align:left;
+}
+
+
