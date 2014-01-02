@@ -51,7 +51,9 @@ body{
 
 .sidebar{
     background-color:#FBE2B4;
-    height:500px;
+    //height:450px;
+    height:inherit;
+    overflow:auto;
 }
 
 .sidebar .registernav,.sidebar .loginnav{
@@ -84,14 +86,17 @@ body{
 
 .content{
     background-color:#E5E5E5;
-    height:500px;
-    overflow:scroll;
+   // height:450px;
+    height:inherit;
+    overflow:auto;
+
 }
 
 .footer{
     background-color: #24A7B4;
     color:#fff;
 	font-size: 10pt;
+    height:30px;
 }
 
 .search{
@@ -101,6 +106,10 @@ body{
     width:45%;
     border-radius:3px;
     
+}
+
+.contentbody{
+    height:500px;
 }
 
 .contentbody .sidebar{
@@ -113,7 +122,6 @@ body{
 }
 
 p#indexpage_showinfo{
-    //border:2px solid red;
     position:relative;
     top:65%;
     left:25%;
@@ -128,8 +136,6 @@ p#indexpage_showinfo{
     width:30%
     
 }
-
-
 
 .regerror{
     position:relative;

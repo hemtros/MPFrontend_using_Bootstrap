@@ -27,6 +27,12 @@ div.col-xs-10{
 
 }
 
+.sidebar .activesidenav{
+    background-color: #E5E5E5;
+	text-decoration: none;
+	display: block; 
+}
+
 div.addkeyworddiv{
      position:absolute;
     top: 25%;

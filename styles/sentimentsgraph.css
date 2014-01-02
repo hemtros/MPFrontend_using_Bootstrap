@@ -1,0 +1,36 @@
+div.showmonwords{
+    position:relative;
+    top:20%;
+    left:28%;
+    width:350px;
+}
+
+ul.monwordstable{
+    border: 1px solid #0a708e;
+    list-style:none;
+    padding-left:0px;
+    font-size:1.3em;
+}
+.monwordstable li{
+    background-color: #4fa2ad;
+    color:white;
+    display:block;
+    text-decoration:none;
+}
+
+
+.monwordstable li:hover{
+    display:block;
+    background-color:#35b5b5;
+    color:#535353;
+    text-align:center;
+    text-decoration:none;
+    font-family: cursive;
+    cursor:hand;
+    cursor:pointer;
+}
+
+.showmonwords strong{
+    font-size:1.3em;
+    font-family:Helvetica,cursive,fantasy;
+}

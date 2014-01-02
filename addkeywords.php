@@ -116,7 +116,7 @@ if(!$_SESSION['username']){
         
         <div class="row footer">
             <div class="col-xs-12">
-                &copy;&nbsp;Copyright 2013
+                &copy;&nbsp;Copyright <span class="year"></span>
             </div>
         </div>
         

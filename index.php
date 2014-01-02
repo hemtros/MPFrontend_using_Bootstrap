@@ -7,6 +7,7 @@
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" type="text/css" href="styles/bootstrap.css" />
+     <link rel="stylesheet" type="text/css" href="styles/sticky.css" />
      <link rel="stylesheet" type="text/css" href="styles/forms.css" />
      <link rel="stylesheet" type="text/css" href="styles/main.css" />
      <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
@@ -77,9 +78,10 @@
             </div>
         </div>
         
+        
         <div class="row footer">
             <div class="col-xs-12">
-                &copy;&nbsp;Copyright 2013
+                &copy;&nbsp;Copyright <span class="year"></span>
             </div>
         </div>
         
