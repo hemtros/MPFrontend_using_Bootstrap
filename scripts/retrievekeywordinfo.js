@@ -26,7 +26,8 @@ $(document).ready(function(){
                       }
                   }
                     
-                  var keywordsinfo = "<br /><br /><br /><br />";
+                  var keywordsinfo = "";
+                  keywordsinfo += "keyword: " + keyword + "<br />"
                   keywordsinfo += "Total times Data analysed and added: " + info.length + "<br />";
                   keywordsinfo += "Positive sentiment: " + positive + " times" + "<br />";
                   keywordsinfo += "Negative sentiment: " + negative + " times" + "<br />";
@@ -50,6 +51,24 @@ $(document).ready(function(){
                     }
                             
                    keywordsinfo += 'Overall sentiment: ' + '<strong>' + frequent + '</strong>';
+                    //for pie chart
+                                        var pieData = [
+                        {
+                            value: positive,
+                            color:"#F38630"
+                        },
+                        {
+                            value : negative,
+                            color : "#E0E4CC"
+                        },
+                        {
+                            value : neutral,
+                            color : "#69D2E7"
+                        }			
+                    ];
+                         
+                    var ctx = document.getElementById("piechart").getContext("2d");
+	                var piechart = new Chart(ctx).Pie(pieData);
                    $('.keywordsinfo').html(keywordsinfo);
                 
                 },
@@ -59,7 +78,13 @@ $(document).ready(function(){
 });
       
 });
-    $('#indexgo').click(function(){
+    
+}); 
+
+
+$(document).ready(function(){
+
+    $('#indexgo').on('click', function(){
         var keyword=$('#indexinput').val();
         if(keyword=='' || keyword==null)
         {
@@ -97,6 +122,7 @@ $(document).ready(function(){
                   }
                     
                   var keywordsinfo = "";
+                  keywordsinfo += "keyword: " + keyword + "<br />";
                   keywordsinfo += "Total times Data analysed and added: " + info.length + "<br />";
                   keywordsinfo += "Positive sentiment: " + positive + " times" + "<br />";
                   keywordsinfo += "Negative sentiment: " + negative + " times" + "<br />";
@@ -126,6 +152,84 @@ $(document).ready(function(){
                 },
            
                 error: function(err){
+                     console.log(err);
+                }
+});
+    }//end of else co. if that checks if no keyword is entered
+    });
+    
+
+
+//liupage keyword search
+
+    $('#liugo').click(function(){
+        var keyword=$('#liuinput').val();
+        if(keyword=='' || keyword==null)
+        {
+            $('#liupage_showinfo').html('Enter a keyword first. e.g.apple');
+        }
+        
+        else{
+            
+       $.ajax({
+    			url: "http://majoropinionmining.appspot.com/GetData",
+                type: "get",
+    			data: {q: keyword},
+    			dataType: "json",
+                success: function(info){
+                  var positive=0;
+                  var negative=0;
+                  var neutral=0;
+                  var nob=info.length;
+                  if(info.length==0){
+                    $('#indexpage_showinfo').html('keyword is probably not started to monitor or not enough data has been gathered.');
+                  }
+                
+                  else{
+                  for(var i=0;i<nob;i++){
+                      if(info[i]['label']=='positive'){
+                          positive += 1 ;
+                      }
+                      else if(info[i]['label']=='negative'){
+                          negative += 1;
+                      }
+                      
+                      else{
+                          neutral += 1;
+                      }
+                  }
+                    
+                  var keywordsinfo = "";
+                  keywordsinfo += "keyword: " + keyword + "<br />";
+                  keywordsinfo += "Total times Data analysed and added: " + info.length + "<br />";
+                  keywordsinfo += "Positive sentiment: " + positive + " times" + "<br />";
+                  keywordsinfo += "Negative sentiment: " + negative + " times" + "<br />";
+                  keywordsinfo += "Neutral sentiment: " + neutral + " times" + "<br />";
+                  
+                  var largest=positive;
+                  console.log(largest);
+                  if(negative>largest){largest=negative};
+                  if(neutral>largest){largest=neutral};
+                  var frequent= "" ;
+                  if(largest==positive){
+                      frequent='positive';
+                    }
+                
+                    else if(largest==negative){
+                        frequent='negative';
+                    }
+                  
+                    else{
+                            frequent='neutral';
+                    }
+                            
+                   keywordsinfo += 'Overall sentiment: ' + '<strong>' + frequent + '</strong>';
+                   $('#liupage_showinfo').html(keywordsinfo);
+                  }//end of else..checking if keyword is monitored or not
+                
+                },
+           
+                error: function(err){
                     console.log(err);
                 }
 });
@@ -136,6 +240,12 @@ $(document).ready(function(){
 
 $(document).ready(function(){
  $('#indexinput').on("keydown",function(e){
+                      return e.which !=32;
+                      });
+});
+
+$(document).ready(function(){
+ $('#liuinput').on("keydown",function(e){
                       return e.which !=32;
                       });
 });

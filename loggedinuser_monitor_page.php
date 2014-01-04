@@ -20,9 +20,13 @@ if(!$_SESSION['username']){
      <link rel="stylesheet" type="text/css" href="styles/main.css" />
      <link rel="stylesheet" type="text/css" href="styles/loggedinuser_page.css" />
      <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
+     <script type="text/javascript" src="scripts/knockout-3.0.0.js"></script>
+     <script type="text/javascript" src="scripts/globalize.min.js"></script>
+     <script type="text/javascript" src="scripts/dx.chartjs.js"></script>
      <script type="text/javascript" src="scripts/bootstrap.js"></script>
      <script type="text/javascript" src="scripts/myscript.js"></script>
      <script type="text/javascript" src="scripts/getmonitoredkeywords.js"></script>
+     <script type="text/javascript" src="scripts/Chart.min.js"></script>
      <script type="text/javascript" src="scripts/retrievekeywordinfo.js"></script>
 </head>
 
@@ -68,7 +72,7 @@ if(!$_SESSION['username']){
                     <br /><br /><br />
                 </div>
                   <div class="row sidenav">
-                    <a href="sentimentsgraph.php">
+                    <a href="linegraph.php">
                         <div class="col-xs-12">
                             Sentiments Graph
                         </div>
@@ -82,24 +86,37 @@ if(!$_SESSION['username']){
                     </a>
                 </div>
             </div>
-            <div class="col-xs-10 content">  <!--main content area -->
-                <div id="greeting">
-                <?php 
+            
+            <div class="col-xs-10 content" id="liumcontentbody" >  <!--main content area -->
+                    <div id="greeting">
+                        <?php 
+                          echo $_SESSION['username'];
+                        ?>
+                    </div>
+            <!--More info about keywords and option to delete keywords monitored directly -->
                 
-                  echo $_SESSION['username'];
-                ?>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12 showmonwords">
+                      <p>Keywords currently set to monitor.<br /> Click the keyword to know its sentiment</p>
+                        <ul class="monwordstable" id="monpage_monwordstable">
+                        </ul>                 
+                    </div>
+                    
+                    <div class="col-md-6 col-xs-12">
+                        <div class="row">
+                            <div class="col-xs-12 kinfoDiv">
+                                <p class="keywordsinfo"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 piechartDiv">
+                              <canvas id="piechart" width="200" height="200"></canvas>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                      
-               <!--More info about keywords and option to delete keywords monitored directly -->
-                <div class="col-md-6 col-xs-12 showmonwords">
-                 <p>Keywords currently set to monitor</p>
-                    <ul class="monwordstable" id="monpage_monwordstable">
-                    </ul>                 
                  
-             </div>
-                
-                <div class="keywordsinfo">
-                </div>
+              
                 
             </div><!--end of main content area -->
               

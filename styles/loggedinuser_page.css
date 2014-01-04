@@ -2,7 +2,7 @@ div#greeting{
     height:30px;
     background-color: #0099CC;
     width: 100%;
-    padding-left:0px;
+    padding-left:4px;
     padding-right:0px;
 }
 
@@ -120,5 +120,71 @@ p#showinfo1{
    // border: 2px solid red;
     text-align:left;
 }
+
+ul#monwordstablenoclick li:hover{
+    cursor:default;
+    
+}
+
+ul#monwordstablenoclick{
+    float:right;
+}
+
+div.showmonwords_home{
+    
+    position:relative;
+    top:5%;
+    left:62%;
+    width:350px;
+    
+}
+
+
+/*for searchbox in users homepage*/
+
+p#liupage_showinfo{
+    position:absolute;
+    top:40%;
+    left:18%;
+    width:33%;
+    overflow:auto;
+}
+
+.liusearch{
+    position:absolute;
+    top: 50%;
+    left:10%;
+    width:45%;
+    border-radius:3px;
+    
+}
+
+.liusearchaftertype{
+    top:10%;
+}
+
+
+canvas#piechart{
+    float:right;
+    padding-top:5px;
+}
+
+div.piechartDiv{
+    margin-top:10px;
+    
+}
+
+div.kinfoDiv{
+    margin-top:10px;
+}
+
+div.showmonwords{
+    margin-top:10%;
+}
+
+#liumcontentbody{
+    overflow:hidden;
+}
+
 
 

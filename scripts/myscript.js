@@ -56,7 +56,48 @@ $('.register').submit(function(e) {
 
 $(document).ready(function(){
     $('.year').html((new Date).getFullYear());
-})
+});
+
+$(document).keypress(function(e){
+   if(e.which==13) {
+       $('#indexgo').focus();
+       $('#indexgo').click();
+   }
+});
+
+$(document).ready(function(){
+   $('#indexinput') .focus();
+});
+
+
+$(document).ready(function(){
+    $('#indexinput').on('keypress',function(e){
+        $('.search').addClass('searchaftertype');
+    });
+});
+
+//for liusers
+
+$(document).keypress(function(e){
+   if(e.which==13) {
+       $('#liugo').focus();
+       $('#liugo').click();
+   }
+});
+
+$(document).ready(function(){
+   $('#liuinput') .focus();
+});
+
+
+$(document).ready(function(){
+    $('#liuinput').on('keypress',function(e){
+        $('.liusearch').addClass('liusearchaftertype');
+    });
+});
+
+
+
 
 
 

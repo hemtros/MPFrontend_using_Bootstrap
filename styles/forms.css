@@ -206,3 +206,41 @@
 }
 
 
+/*my code */
+
+ul#remcheckul{
+    list-style:none;
+    position:relative;
+    top:100%;
+    right:13%;
+}
+
+li#checkboxli{
+   
+    float:left;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+input#rememberme{
+    width:13px;
+    margin-top: 8px;
+}
+
+label#remlabel{
+    display:block;
+    width:200px;
+}
+
+li#remchecklabel{
+    float:right;
+}
+
+
+
+
+
+
+
+
+

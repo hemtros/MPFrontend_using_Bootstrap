@@ -38,6 +38,7 @@ if($count==1){
 	session_start();
 	$_SESSION['username']=$username;
 	$_SESSION['enpassword']=$enpassword;
+	
 	header("location:loggedinuser_page.php");
 	mysql_close($con);
 }

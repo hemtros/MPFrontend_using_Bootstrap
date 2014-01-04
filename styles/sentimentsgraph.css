@@ -34,3 +34,18 @@ ul.monwordstable{
     font-size:1.3em;
     font-family:Helvetica,cursive,fantasy;
 }
+
+.graphBody{
+    border-top:4px solid #00b0c7;
+    height:650px;
+    background-color:#E5E5E5;
+    overflow:scroll;
+}
+
+.topImage{
+    float:left;
+}
+
+
+
+

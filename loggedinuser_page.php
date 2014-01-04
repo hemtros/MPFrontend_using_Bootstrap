@@ -3,7 +3,7 @@
 session_start();
 
 if(!$_SESSION['username']){
-	header("location:login_page.php");
+	        header("location:login_page.php");
 }
 ?>
 
@@ -23,6 +23,7 @@ if(!$_SESSION['username']){
      <script type="text/javascript" src="scripts/bootstrap.js"></script>
      <script type="text/javascript" src="scripts/myscript.js"></script>
      <script type="text/javascript" src="scripts/getmonitoredkeywords.js"></script>
+     <script type="text/javascript" src="scripts/retrievekeywordinfo.js"></script>
 </head>
 
 <body>
@@ -71,12 +72,20 @@ if(!$_SESSION['username']){
                 </div>
                        
              <!--code to welcome informations for user -->
-             <div class="col-md-6 col-xs-12 showmonwords">
-                 <p>Keywords currently set to monitor</p>
-                    <ul class="monwordstable">
+             <div class="col-md-6 col-xs-12 showmonwords_home">
+                 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Keywords currently set to monitor</p>
+                    <ul class="monwordstable" id="monwordstablenoclick">
                     </ul>                 
-                 
              </div>
+              
+              <div class="input-group liusearch" >
+                  <input type="text" class="form-control" id="liuinput" placeholder="Enter a word to know its sentiment" /> 
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="liugo">Go!</button>
+                  </span>
+                </div><!-- /input-group -->
+                <p id="liupage_showinfo">
+                </p>
             
             </div><!--end of main content area -->
               
@@ -97,6 +106,6 @@ if(!$_SESSION['username']){
     <input type="hidden" id="liuppassword" name="enpassword" 
     value="<?php echo $_SESSION['enpassword']; ?>" />
     </form>
-     
+    
 </body>
 </html>

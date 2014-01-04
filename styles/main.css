@@ -108,6 +108,10 @@ body{
     
 }
 
+.searchaftertype{
+    top:10%;
+}
+
 .contentbody{
     height:500px;
 }
@@ -123,8 +127,8 @@ body{
 
 p#indexpage_showinfo{
     position:relative;
-    top:65%;
-    left:25%;
+    top:40%;
+    left:28%;
     width:43%;
     overflow:auto;
 }

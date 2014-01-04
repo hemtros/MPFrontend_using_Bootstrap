@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+if(!$_SESSION['username']){
+	header("location:login_page.php");
+}
+?>
+
+
 <!Doctype html>
 
 
@@ -7,14 +17,16 @@
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" type="text/css" href="styles/bootstrap.css" />
-     <link rel="stylesheet" type="text/css" href="styles/sticky.css" />
      <link rel="stylesheet" type="text/css" href="styles/forms.css" />
      <link rel="stylesheet" type="text/css" href="styles/main.css" />
      <link rel="stylesheet" type="text/css" href="styles/loggedinuser_page.css" />
+     <link rel="stylesheet" type="text/css" href="styles/sentimentsgraph.css" />
      <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
      <script type="text/javascript" src="scripts/bootstrap.js"></script>
      <script type="text/javascript" src="scripts/myscript.js"></script>
      <script type="text/javascript" src="scripts/retrievekeywordinfo.js"></script>
+     <script type="application/javascript" src="scripts/Chart.min.js"></script>
+     <script type="text/javascript" src="scripts/bargraph.js"></script>
 
 </head>
 
@@ -38,8 +50,8 @@
             <div class="row navibar">
               
                  <ul class="nav nav-pills" id="navigbar">
-                      <li class="myactive"><a href="#">Home</a></li>
-                      <li><a href="login_page.php">Monitor</a></li>
+                      <li><a href="loggedinuser_page.php">Home</a></li>
+                      <li class="myactive"><a href="loggedinuser_monitor_page.php">Monitor</a></li>
                       <li><a href="#">Support</a></li>
                        <li><a href="#">About Us</a></li>
                 </ul>
@@ -51,34 +63,55 @@
                 <div class="row breaks">
                     <br /><br /><br />
                 </div>
-                <div class="row registernav">
-                    <a href="registration_page.php">
+                   <div class="row sidenav"><!--logoutnav -->
+                    <a href="logout.php">
                        <div class="col-xs-12">
-                          Register
+                          logout
                        </div>
                     </a>
+                </div><!-- End logoutnav -->
+                <div class="row breaks">
+                    <br /><br /><br />
                 </div>
-                <div class="row loginnav">
-                   <a href="login_page.php">
-                       <div class="col-xs-12">
-                          Login
-                       </div>
-                   </a>
+                  
+                <div class="row sidenav">
+                    <a href="linegraph.php">
+                    <div class="col-xs-12">
+                        Line graph
+                    </div>
+                    </a>
+                </div>
+                <div class="row sidenav activesidenav">
+                    <a href="bargraph.php">
+                        <div class="col-xs-12">
+                        Bar graph
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="col-xs-10 content">
-                <div class="input-group search" >
-                  <input type="text" class="form-control" id="indexinput" placeholder="Enter a word to know its sentiment"/> 
-                  <span class="input-group-btn">
-                    <button class="btn btn-default" type="button" id="indexgo">Go!</button>
-                  </span>
-                </div><!-- /input-group -->
-                <p id="indexpage_showinfo">
-                </p>
+               
+                <div id="greeting">
+                    <?php 
+                      echo $_SESSION['username'];
+                    ?>
+                </div>
                 
+                 <div class="col-md-6 col-xs-12 showmonwords">
+                 <p><strong>Keywords currently set to monitor.</strong><br />(Click on keywords to generate its Bar Graph)</p>
+                    <ul class="monwordstable" id="bargraph_monwordstable">
+                    </ul>                 
+                 
+             </div>
+               <!--content --> 
+               
             </div>
         </div>
         
+         <div class="row" >
+                <div class="col-xs-12" id="bargraphDiv">
+                </div>
+            </div>
         
         <div class="row footer">
             <div class="col-xs-12">
@@ -87,5 +120,12 @@
         </div>
         
     </div>
+    <form id="bargraph_hiddenform">
+    <input type="hidden"  name="username"
+     value="<?php echo $_SESSION['username']; ?>" />
+     
+    <input type="hidden" name="enpassword" 
+    value="<?php echo $_SESSION['enpassword']; ?>" />
+    </form>
 </body>
 </html>

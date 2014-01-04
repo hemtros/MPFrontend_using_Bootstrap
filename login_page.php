@@ -69,7 +69,14 @@
 			    
 			    <label for="password">Password</label>
 			    <input type="password" name="password" id="password" placeholder="Password" required="">
-			    			
+                  
+<!--
+                  <ul id="remcheckul">
+                      <li id="checkboxli"><input type="checkbox" name="rememberme" id="rememberme" /></li>
+                      <li id="remchecklabel"><label for="rememberme" id="remlabel">Remember Me</label></li>
+                  </ul>
+-->
+              
 			    <button type="submit" alt="Log In" id="button">Log Me In</button>	
 			</form><!-- .login -->
             </div>
