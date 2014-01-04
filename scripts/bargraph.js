@@ -31,7 +31,12 @@ $(document).ready(function(){
 
 $(document).ready(function(){
        $('#bargraph_monwordstable').on('click','li',function(e){
-
+           
+      if($('#bargraphmainDiv').hasClass('graphBody')){
+          $('#bargraphmainDiv').removeClass('graphBody');
+          $('#barlegendandimageDiv').html('');
+          $('#bargraphDiv').html('');
+      }
       var keyword=$(this).html();
        $.ajax({
     			url: "http://majoropinionmining.appspot.com/GetData",
@@ -40,13 +45,16 @@ $(document).ready(function(){
     			dataType: "json",
                 success: function(info){
                     
-                   $('#bargraphDiv').addClass('graphBody');
+                   $('#bargraphmainDiv').addClass('graphBody');
                    
                     if(!$('*').hasClass('topImage')){
-                   $('#bargraphDiv').append("<a href='#'><img src='images/toTop_32x32.png' class='topImage' /></a>");
+                   $('#barlegendandimageDiv').append("<a href='#'><img src='images/toTop_32x32.png' class='topImage' /></a>");
                     }
-                    $('#bargraphDiv').append("<canvas id='bargraph' width='5000' height='600'></canvas>")
-                 location.href='#bargraphDiv';
+                    
+                    $("#barlegendandimageDiv").append('<div id="barlegend"></div>');
+                    $('#bargraphDiv').append("<canvas id='bargraph' width='5000' height='600'></canvas>");
+                    
+                 location.href='#bargraphmainDiv';
                     var no=info.length;
                     var bargraphData
                     var labels=[];
@@ -69,24 +77,28 @@ $(document).ready(function(){
                                 {
                                     fillColor : "#4DA944",
                                     strokeColor : "rgba(220,220,220,1)",
-                                    data : pos
+                                    data : pos,
+                                    title : 'Positive'
+                                    
                                 },
                                 {
                                     fillColor : "#3880AA",
                                     strokeColor : "rgba(151,187,205,1)",
-                                    data : neg
+                                    data : neg,
+                                    title: 'Negative'
                                 },
                                 {
                                     fillColor : "#cad4d9",
                                     strokeColor : "rgba(151,187,205,1)",
-                                    data : neu
+                                    data : neu,
+                                    title: 'Neutral'
                                 }
                             ]
                         }
                         
                         var ctx = document.getElementById("bargraph").getContext("2d");
 	                    var myNewChart = new Chart(ctx).Bar(bargraphData);
-                        
+                        legend(document.getElementById('barlegend'),bargraphData);
                         
                    
              

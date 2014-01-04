@@ -26,6 +26,7 @@ if(!$_SESSION['username']){
      <script type="text/javascript" src="scripts/myscript.js"></script>
      <script type="text/javascript" src="scripts/retrievekeywordinfo.js"></script>
      <script type="text/javascript" src="scripts/Chart.min.js"></script>
+     <script type="text/javascript" src="scripts/legend.js"></script>
      <script type="text/javascript" src="scripts/linegraph.js"></script>
 
 </head>
@@ -106,10 +107,10 @@ if(!$_SESSION['username']){
             </div>
             
         </div>
-          <div class="row" >
-                <div class="col-xs-12" id="linegraphDiv">
-                </div>
-            </div>
+          <div class="row" id="graphmainDiv">
+                <div class="col-xs-12" id="legendandimageDiv"></div>
+                <div class="col-xs-12" id="linegraphDiv"></div>
+          </div>
         
         <div class="row footer">
             <div class="col-xs-12">

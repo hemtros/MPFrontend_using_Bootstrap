@@ -37,13 +37,13 @@ ul.monwordstable{
 
 .graphBody{
     border-top:4px solid #00b0c7;
-    height:650px;
+    height:680px;
     background-color:#E5E5E5;
     overflow:scroll;
 }
 
 .topImage{
-    float:left;
+    float:right;
 }
 
 

@@ -55,20 +55,26 @@ $(document).ready(function(){
                                         var pieData = [
                         {
                             value: positive,
-                            color:"#F38630"
+                            color:"#F38630",
+                            title: 'positive'
                         },
                         {
                             value : negative,
-                            color : "#E0E4CC"
+                            color : "#E0E4CC",
+                            title: 'negative'
                         },
                         {
                             value : neutral,
-                            color : "#69D2E7"
+                            color : "#69D2E7",
+                            title: 'neutral'
                         }			
                     ];
                          
                     var ctx = document.getElementById("piechart").getContext("2d");
 	                var piechart = new Chart(ctx).Pie(pieData);
+                    if($('#pielegend').html()==''){
+                        legend(document.getElementById('pielegend'),pieData); 
+                    }
                    $('.keywordsinfo').html(keywordsinfo);
                 
                 },

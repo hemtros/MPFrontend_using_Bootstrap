@@ -20,13 +20,11 @@ if(!$_SESSION['username']){
      <link rel="stylesheet" type="text/css" href="styles/main.css" />
      <link rel="stylesheet" type="text/css" href="styles/loggedinuser_page.css" />
      <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
-     <script type="text/javascript" src="scripts/knockout-3.0.0.js"></script>
-     <script type="text/javascript" src="scripts/globalize.min.js"></script>
-     <script type="text/javascript" src="scripts/dx.chartjs.js"></script>
      <script type="text/javascript" src="scripts/bootstrap.js"></script>
      <script type="text/javascript" src="scripts/myscript.js"></script>
      <script type="text/javascript" src="scripts/getmonitoredkeywords.js"></script>
      <script type="text/javascript" src="scripts/Chart.min.js"></script>
+     <script type="text/javascript" src="scripts/legend.js"></script>
      <script type="text/javascript" src="scripts/retrievekeywordinfo.js"></script>
 </head>
 
@@ -111,6 +109,7 @@ if(!$_SESSION['username']){
                         <div class="row">
                             <div class="col-xs-12 piechartDiv">
                               <canvas id="piechart" width="200" height="200"></canvas>
+                              <div id="pielegend"></div>
                             </div>
                         </div>
                     </div>

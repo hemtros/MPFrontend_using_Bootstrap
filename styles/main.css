@@ -162,3 +162,18 @@ ul#navigbar li a{
     padding-bottom:7px;
 }
 
+
+
+.legend {
+    width: 10em;
+ 
+}
+
+.legend .title {
+    display: block;
+    margin: 0.5em;
+    border-style: solid;
+    border-width: 0 0 0 1em;
+    padding: 0 0.3em;
+}
+

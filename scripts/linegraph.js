@@ -31,7 +31,12 @@ $(document).ready(function(){
 
 $(document).ready(function(){
        $('#linegraph_monwordstable').on('click','li',function(e){
-
+           
+      if($('#graphmainDiv').hasClass('graphBody')){
+          $('#graphmainDiv').removeClass('graphBody');
+          $('#legendandimageDiv').html('');
+          $('#linegraphDiv').html('');
+      }
       var keyword=$(this).html();
        $.ajax({
     			url: "http://majoropinionmining.appspot.com/GetData",
@@ -40,13 +45,16 @@ $(document).ready(function(){
     			dataType: "json",
                 success: function(info){
                     
-                   $('#linegraphDiv').addClass('graphBody');
-                   
+                    
+                    $('#graphmainDiv').addClass('graphBody');
+                  
                     if(!$('*').hasClass('topImage')){
-                   $('#linegraphDiv').append("<a href='#'><img src='images/toTop_32x32.png' class='topImage' /></a>");
+                   $("#legendandimageDiv").append("<a href='#'><img src='images/toTop_32x32.png' class='topImage' /></a>");
                     }
-                    $('#linegraphDiv').append("<canvas id='linegraph' width='5000' height='600'></canvas>")
-                    location.href='#linegraphDiv';
+                    $("#legendandimageDiv").append('<div id="linelegend"></div>');
+                    $('#linegraphDiv').append("<canvas id='linegraph' width='5000' height='560'></canvas>");
+                    location.href="#graphmainDiv";
+               
                     var no=info.length;
                     var linegraphData
                     var labels=[];
@@ -70,28 +78,31 @@ $(document).ready(function(){
                                     strokeColor : "rgba(220,220,220,1)",
                                     pointColor : "rgba(220,220,220,1)",
 			                        pointStrokeColor : "#fff",
-                                    data : pos
+                                    data : pos,
+                                    title: 'positive'
                                 },
                                 {
                                     fillColor : "#3880AA",
                                     strokeColor : "rgba(151,187,205,1)",
                                     pointColor : "rgba(220,220,220,1)",
 			                         pointStrokeColor : "#fff",
-                                    data : neg
+                                    data : neg,
+                                    title : 'Negative'
                                 },
                                 {
                                     fillColor : "#cad4d9",
                                     strokeColor : "rgba(151,187,205,1)",
                                     pointColor : "rgba(220,220,220,1)",
 			                        pointStrokeColor : "#fff",
-                                    data : neu
+                                    data : neu,
+                                    title: 'Neutral'
                                 }
                             ]
                         }
                         
                         var ctx = document.getElementById("linegraph").getContext("2d");
 	                    var myNewChart = new Chart(ctx).Line(lineGraphData);
-                        
+                        legend(document.getElementById('linelegend'),lineGraphData);
                         
                    
              
