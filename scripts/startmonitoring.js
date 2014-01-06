@@ -1,6 +1,11 @@
+
+
 $(document).ready(function(){
     var datasagar=$('#addkeyword_hiddenform').serializeArray();
 $('#startmonitoring').click(function(){
+    
+   
+   
     $('#showinfo1').html('');
      $.ajax({
     			url: "http://localhost/backend/index.php/main/monitored_keyword",
@@ -18,30 +23,37 @@ $('#startmonitoring').click(function(){
                             var monwords=info['monitored_keyword'].split(',');
                             var nowords=monwords.length;
                             
-                               for(var i=0;i<nowords;i++) {
+                             
+                               for(var v=0;v<nowords;v++) {
                                    $.ajax({
                                        url: "http://majoropinionmining.appspot.com/monitor",
-                                       data: {operation: 'add',word: monwords[i] },
+                                       data: {operation: 'add',word: monwords[v] },
                                        type: "post",
                                        dataType: "json",
                                        success: function(suc){
+                                          
                                            if(suc['success']){
+                                                $('#showinfo1').append(suc['success'] + '<br />');
                                                
-                                                                                                                                                    $('#showinfo1').append('<br />' + suc['success']);
+                                              
                                            }
                                            
                                            else{
-                                                                                                                                                    $('#showinfo1').append('<br />' + suc['error']);
+                                               
+                                             $('#showinfo1').append(suc['error'] + '<br />');
+                                               
+                                             
                                            }
+                                        
+                                           
                                        },
                                        error: function(er){
                                            console.log(er);
                                        }
                                    });
                             }//for loop ends
-                           
-                        }//comma checking if ends
-                        
+                            
+          }//comma checking if ends
                         else{
                              $.ajax({
                                        url: "http://majoropinionmining.appspot.com/monitor",

@@ -36,10 +36,11 @@ ul.monwordstable{
 }
 
 .graphBody{
-    border-top:4px solid #00b0c7;
+    /*border-top:4px solid #00b0c7;*/
     height:680px;
     background-color:#E5E5E5;
-    overflow:scroll;
+    overflow-x:scroll;
+    overflow-y:hidden;
 }
 
 .topImage{

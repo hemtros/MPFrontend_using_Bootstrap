@@ -53,8 +53,8 @@ if(!$_SESSION['username']){
                 
             </div>
         
-        <div class="row contentbody">
-           <div class="col-xs-2 sidebar"><!--sidebar -->
+        <div class="row contentbody wrapper">
+           <div class="col-xs-2 block sidebar"><!--sidebar -->
                   <div class="row breaks">
                     <br /><br /><br />
                 </div>
@@ -69,14 +69,15 @@ if(!$_SESSION['username']){
                     <br /><br /><br />
                 </div>
                 <div class="row sidenav">
-                    <a href="sentimentsgraph.php">
+                    <a href="linegraph.php">
                         <div class="col-xs-12">
                             Sentiments Graph
                         </div>
                     </a>
                 </div>
             </div>
-            <div class="col-xs-10 content">  <!--main content area -->
+            <div class="background bg1"></div>
+            <div class="col-xs-10 content block">  <!--main content area -->
                 <div id="greeting">Hello
                 <?php 
                 
@@ -111,7 +112,7 @@ if(!$_SESSION['username']){
                                   
                 
             </div><!--end of main content area -->
-              
+              <div class="background bg2"></div>
         </div><!--end of contentbody -->
         
         <div class="row footer">

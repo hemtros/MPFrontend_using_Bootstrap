@@ -16,7 +16,7 @@ div.col-xs-10{
 	text-align: center;
 	padding-top: 4%;
 	height:40px;
-	background-color: #EAE2B4;
+	background-color: #d8d8d8;
 	font-size: 1.2em;
 }
 
@@ -57,7 +57,7 @@ div.showmonwords{
 
 ul.monwordstable{
     border: 1px solid #0a708e;
-    width: 300px;
+    width: 250px;
     list-style:none;
     padding-left:0px;
     font-size:1.3em;
@@ -66,6 +66,7 @@ ul.monwordstable{
     background-color: #4fa2ad;
    // border-bottom: 2px dotted teal;
     color:white;
+    padding-left:6px;
 }
 
 .monwordstable li{
@@ -126,6 +127,10 @@ ul#monwordstablenoclick li:hover{
     
 }
 
+ul#monwordstablenoclick li img.minus-btn:hover{
+    cursor:pointer;
+}
+
 ul#monwordstablenoclick{
     float:right;
 }
@@ -184,12 +189,19 @@ div.kinfoDiv{
 }
 
 div.showmonwords{
-    margin-top:10%;
+    margin-top:3%;
 }
 
 #liumcontentbody{
     overflow:hidden;
 }
+
+/*
+img.minus-btn{
+   
+   float:right;
+}
+*/
 
 
 

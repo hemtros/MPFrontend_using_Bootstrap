@@ -59,8 +59,8 @@ if(!$_SESSION['username']){
                 
             </div>
         
-        <div class="row contentbody">
-           <div class="col-xs-2 sidebar">
+        <div class="row contentbody wrapper">
+           <div class="col-xs-2 sidebar block">
                 <div class="row breaks">
                     <br /><br /><br />
                 </div>
@@ -90,7 +90,8 @@ if(!$_SESSION['username']){
                     </a>
                 </div>
             </div>
-            <div class="col-xs-10 content">
+            <div class="background bg1"></div>
+            <div class="col-xs-10 content block">
                <div id="greeting">
                     <?php 
                       echo $_SESSION['username'];
@@ -103,9 +104,8 @@ if(!$_SESSION['username']){
                     </ul>                 
                  
                  </div>
-               <!--content -->
             </div>
-            
+            <div class="background bg2"></div>
         </div>
           <div class="row" id="graphmainDiv">
                 <div class="col-xs-12" id="legendandimageDiv"></div>

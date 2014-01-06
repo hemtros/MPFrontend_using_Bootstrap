@@ -38,8 +38,8 @@
                 </ul>
             </div>
         
-        <div class="row contentbody">
-            <div class="col-xs-2 sidebar">
+        <div class="row contentbody wrapper">
+            <div class="col-xs-2 sidebar block">
                 <div class="row breaks">
                     <br /><br /><br />
                 </div>
@@ -60,8 +60,8 @@
 		     
 		
             </div>
-            
-            <div class="col-xs-10 content">
+            <div class="background bg1"></div>
+            <div class="col-xs-10 content block">
                 <form class="login" action="checklogin.php" method="post">
 			    <h1>Login, Please? <img src="images/lock_fill.svg" class="secure" /></h1>
 			    <label for="username">Username</label>
@@ -80,6 +80,7 @@
 			    <button type="submit" alt="Log In" id="button">Log Me In</button>	
 			</form><!-- .login -->
             </div>
+            <div class="background bg2"></div>
         </div>
         
         <div class="row footer">

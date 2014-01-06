@@ -188,7 +188,7 @@ $(document).ready(function(){
                   var neutral=0;
                   var nob=info.length;
                   if(info.length==0){
-                    $('#indexpage_showinfo').html('keyword is probably not started to monitor or not enough data has been gathered.');
+                    $('#liupage_showinfo').html('keyword is probably not started to monitor or not enough data has been gathered.');
                   }
                 
                   else{
@@ -255,3 +255,4 @@ $(document).ready(function(){
                       return e.which !=32;
                       });
 });
+

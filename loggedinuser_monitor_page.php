@@ -26,6 +26,7 @@ if(!$_SESSION['username']){
      <script type="text/javascript" src="scripts/Chart.min.js"></script>
      <script type="text/javascript" src="scripts/legend.js"></script>
      <script type="text/javascript" src="scripts/retrievekeywordinfo.js"></script>
+     
 </head>
 
 <body>
@@ -53,8 +54,8 @@ if(!$_SESSION['username']){
                 
             </div>
         
-        <div class="row contentbody">
-           <div class="col-xs-2 sidebar"><!--sidebar -->
+        <div class="row contentbody wrapper">
+           <div class="col-xs-2 sidebar block"><!--sidebar -->
                   <div class="row breaks">
                     <br /><br />
                 </div>
@@ -85,7 +86,8 @@ if(!$_SESSION['username']){
                 </div>
             </div>
             
-            <div class="col-xs-10 content" id="liumcontentbody" >  <!--main content area -->
+            <div class="background bg1"></div>
+            <div class="col-xs-10 content block" id="liumcontentbody" >  <!--main content area -->
                     <div id="greeting">
                         <?php 
                           echo $_SESSION['username'];
@@ -118,7 +120,7 @@ if(!$_SESSION['username']){
               
                 
             </div><!--end of main content area -->
-              
+            <div class="background bg2"></div>  
         </div><!--end of contentbody -->
         
         <div class="row footer">
@@ -128,7 +130,7 @@ if(!$_SESSION['username']){
         </div>
         
     </div>
-    <form id="loggedinuser_hiddenform">
+    <form id="loggedinusermonitor_hiddenform">
     <input type="hidden" id="liupusername" name="username"
      value="<?php echo $_SESSION['username']; ?>" />
      

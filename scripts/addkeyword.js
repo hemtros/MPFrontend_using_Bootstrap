@@ -129,6 +129,7 @@ $(document).ready(function(){
             success: function(info){
                 if(myflag==0){
                     $('#showinfo').html(info.success);
+                    console.log(datasagar);
                 }
                 else{
                     $("#showinfo").append('<br />' + info.success);

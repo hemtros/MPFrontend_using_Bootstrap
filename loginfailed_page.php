@@ -40,8 +40,8 @@
                 
             </div>
         
-        <div class="row contentbody">
-           <div class="col-xs-2 sidebar">
+        <div class="row contentbody wrapper">
+           <div class="col-xs-2 sidebar block">
                 <div class="row breaks">
                     <br /><br /><br />
                 </div>
@@ -60,11 +60,13 @@
                    </a>
                 </div>
             </div>
-            <div class="col-xs-10 content">
+            <div class="background bg1"></div>
+            <div class="col-xs-10 content block">
                 <p>
                     Login failed. Wrong username or password
                 </p>
             </div>
+            <div class="background bg2s"></div>
         </div>
         
         <div class="row footer">

@@ -38,8 +38,8 @@
                 </ul>
             </div>
         
-        <div class="row contentbody">
-          <div class="col-xs-2 sidebar">
+        <div class="row contentbody wrapper">
+          <div class="col-xs-2 sidebar block">
                 <div class="row breaks">
                     <br /><br /><br />
                 </div>
@@ -60,7 +60,8 @@
 		     
 		
             </div>
-            <div class="col-xs-10 content">
+            <div class="background bg1"></div>
+            <div class="col-xs-10 content block">
                <form class="register" >
 			    <h1>Join, Please? <img src="images/lock_fill.svg" class="secure" /></h1>
 			   
@@ -83,6 +84,7 @@
 			    
 			</form><!-- .register -->
             </div>
+            <div class="background bg2"></div>
         </div>
         
         <div class="row footer">

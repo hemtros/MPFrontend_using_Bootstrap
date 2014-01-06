@@ -7,9 +7,11 @@
      <title>Product Monitoring Service</title>
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/gradients.css" />
      <link rel="stylesheet" type="text/css" href="styles/bootstrap.css" />
      <link rel="stylesheet" type="text/css" href="styles/forms.css" />
      <link rel="stylesheet" type="text/css" href="styles/main.css" />
+
      <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
      <script type="text/javascript" src="scripts/bootstrap.js"></script>
      <script type="text/javascript" src="scripts/myscript.js"></script>
@@ -35,18 +37,16 @@
         
        
             <div class="row navibar">
-              
                  <ul class="nav nav-pills" id="navigbar">
                       <li class="myactive"><a href="#">Home</a></li>
                       <li><a href="login_page.php">Monitor</a></li>
                       <li><a href="#">Support</a></li>
                        <li><a href="#">About Us</a></li>
                 </ul>
-                
             </div>
         
-        <div class="row contentbody">
-           <div class="col-xs-2 sidebar">
+        <div class="row contentbody wrapper">
+          <div class="col-xs-2 block sidebar">
                 <div class="row breaks">
                     <br /><br /><br />
                 </div>
@@ -65,7 +65,9 @@
                    </a>
                 </div>
             </div>
-            <div class="col-xs-10 content">
+          
+            <div class="background bg1"></div>
+            <div class="col-xs-10 block content">
                 <div class="input-group search" >
                   <input type="text" class="form-control" id="indexinput" placeholder="Enter a word to know its sentiment"/> 
                   <span class="input-group-btn">
@@ -76,6 +78,8 @@
                 </p>
                 
             </div>
+            <div class="background bg2"></div>
+             
         </div>
         
         
