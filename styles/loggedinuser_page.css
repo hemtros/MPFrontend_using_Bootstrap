@@ -44,6 +44,8 @@ div.addkeyworddiv{
 
 #showinfo{
     text-align:center;
+    width:70%;
+    overflow:auto;
 }
 
 #showinfo1{

@@ -104,74 +104,42 @@ $(document).ready(function(){
         else{
          
        $.ajax({
-    			url: "http://majoropinionmining.appspot.com/GetData",
+    			url: "http://majoropinionmining.appspot.com/twitter",
                 type: "get",
     			data: {q: keyword},
     			dataType: "json",
                 success: function(info){
-                  var positive=0;
-                  var negative=0;
-                  var neutral=0;
                   var nob=info.length;
-                  if(info.length==0){
-                    $('#indexpage_showinfo').html('keyword is probably not started to monitor or not enough data has been gathered. You need to register to add new keywords to start monitoring');         
+                  if(nob==0){
+    
+                      $('#indexpage_showinfo').html('No post could be analysed');
                       $('#progressbar').hide();
                   }
                 
                   else{
-                  for(var i=0;i<nob;i++){
-                      if(info[i]['label']=='positive'){
-                          positive += 1 ;
-                      }
-                      else if(info[i]['label']=='negative'){
-                          negative += 1;
-                      }
+                        var keywordsinfo = "";
+                        keywordsinfo +="Total post analysed: 15" + "<br />" 
+                        keywordsinfo += 'positive: ' + info.summary.pos + "<br />";
+                        keywordsinfo += 'Negative: ' + info.summary.neg + "<br />";
+                        keywordsinfo += 'Neutral: ' + info.summary.neutral + "<br />";
+                        keywordsinfo += "Label: " + info.summary.label;
+                       $(indexpage_showinfo).html(keywordsinfo);
+                      $('#progressbar').hide();
+                      //keywordsinfo += info['summary']['pos'];
+                        
                       
-                      else{
-                          neutral += 1;
-                      }
                   }
-                    
-                  var keywordsinfo = "";
-                  keywordsinfo += "keyword: " + keyword + "<br />";
-                  keywordsinfo += "Total times Data analysed and added: " + info.length + "<br />";
-                  keywordsinfo += "Positive sentiment: " + positive + " times" + "<br />";
-                  keywordsinfo += "Negative sentiment: " + negative + " times" + "<br />";
-                  keywordsinfo += "Neutral sentiment: " + neutral + " times" + "<br />";
-                  
-                  var largest=positive;
-                  console.log(largest);
-                  if(negative>largest){largest=negative};
-                  if(neutral>largest){largest=neutral};
-                  var frequent= "" ;
-                  if(largest==positive){
-                      frequent='positive';
-                    }
-                
-                    else if(largest==negative){
-                        frequent='negative';
-                    }
-                  
-                    else{
-                            frequent='neutral';
-                    }
-                            
-                   keywordsinfo += 'Overall sentiment: ' + '<strong>' + frequent + '</strong>';        
-                   $('#progressbar').hide();
-                   $('#indexpage_showinfo').html(keywordsinfo);
-                  }//end of else..checking if keyword is monitored or not
-                
+
                 },
-           
-                error: function(err){
-                     console.log(err);
-                }
-});
-    }//end of else co. if that checks if no keyword is entered
-    });
+                    
+                    error: function(err){
+                        console.log(err);
+                    }
+    });//end ajax
+        }
     
-
-
+    });
+       
 //liupage keyword search
 
     $('#liugo').click(function(){
