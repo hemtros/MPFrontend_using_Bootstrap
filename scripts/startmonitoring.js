@@ -1,3 +1,4 @@
+/* authored by Hem Sharma Acharya[hemtros@gmail.com]*/
 
 
 $(document).ready(function(){

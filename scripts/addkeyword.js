@@ -1,3 +1,5 @@
+/* authored by Hem Sharma Acharya[hemtros@gmail.com]*/
+
 var myflag;
 $(document).ready(function(){
  $('#new_keyword').on("keydown",function(e){

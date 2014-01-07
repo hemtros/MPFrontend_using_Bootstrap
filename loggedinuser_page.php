@@ -1,3 +1,5 @@
+<!--authored by Hem sharma Acharya[hemtros@gmail.com] -->
+
 <?php
 
 session_start();
@@ -19,11 +21,13 @@ if(!$_SESSION['username']){
      <link rel="stylesheet" type="text/css" href="styles/forms.css" />
      <link rel="stylesheet" type="text/css" href="styles/main.css" />
      <link rel="stylesheet" type="text/css" href="styles/loggedinuser_page.css" />
+     <link rel="stylesheet" type="text/css" href="styles/jquery-ui.css" />
      <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
      <script type="text/javascript" src="scripts/bootstrap.js"></script>
      <script type="text/javascript" src="scripts/myscript.js"></script>
      <script type="text/javascript" src="scripts/getmonitoredkeywords.js"></script>
      <script type="text/javascript" src="scripts/retrievekeywordinfo.js"></script>
+     <script type="text/javascript" src="scripts/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -74,7 +78,7 @@ if(!$_SESSION['username']){
                        
              <!--code to welcome informations for user -->
              <div class="col-md-6 col-xs-12 showmonwords_home">
-                 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Keywords currently set to monitor</p>
+                 <p>Keywords currently set to monitor. Click <br /><img src="images/minus-26.png" /> to remove monitoring particular word</p>
                     <ul class="monwordstable" id="monwordstablenoclick">
                     </ul>                 
              </div>
@@ -85,13 +89,16 @@ if(!$_SESSION['username']){
                     <button class="btn btn-default" type="button" id="liugo">Go!</button>
                   </span>
                 </div><!-- /input-group -->
+                  
+                  
+                   
                 <p id="liupage_showinfo">
                 </p>
             
             </div><!--end of main content area -->
              <div class="background bg2"></div> 
         </div><!--end of contentbody -->
-        
+         
         <div class="row footer">
             <div class="col-xs-12">
                 &copy;&nbsp;Copyright <span class="year"></span>

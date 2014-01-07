@@ -1,5 +1,10 @@
+/* authored by Hem Sharma Acharya[hemtros@gmail.com]*/
 
 $(document).ready(function() {
+    $('#progressbar').hide();
+    
+    $('.liusearch').hide();
+    
  var datasagar;  
  
 $('.register').submit(function(e) {

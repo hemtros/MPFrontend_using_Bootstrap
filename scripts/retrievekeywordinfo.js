@@ -1,5 +1,7 @@
+/* authored by Hem Sharma Acharya[hemtros@gmail.com]*/
+
 $(document).ready(function(){
-    
+   
    $('#monpage_monwordstable').on('click','li',function(e){
 
       var keyword=$(this).html();
@@ -91,14 +93,16 @@ $(document).ready(function(){
 $(document).ready(function(){
 
     $('#indexgo').on('click', function(){
+        $('#progressbar').show();
         var keyword=$('#indexinput').val();
         if(keyword=='' || keyword==null)
         {
             $('#indexpage_showinfo').html('Enter a keyword first. e.g.apple');
+            $('#progressbar').hide();
         }
         
         else{
-            
+         
        $.ajax({
     			url: "http://majoropinionmining.appspot.com/GetData",
                 type: "get",
@@ -110,7 +114,8 @@ $(document).ready(function(){
                   var neutral=0;
                   var nob=info.length;
                   if(info.length==0){
-                    $('#indexpage_showinfo').html('keyword is probably not started to monitor or not enough data has been gathered. You need to register to add new keywords to start monitoring');
+                    $('#indexpage_showinfo').html('keyword is probably not started to monitor or not enough data has been gathered. You need to register to add new keywords to start monitoring');         
+                      $('#progressbar').hide();
                   }
                 
                   else{
@@ -151,7 +156,8 @@ $(document).ready(function(){
                             frequent='neutral';
                     }
                             
-                   keywordsinfo += 'Overall sentiment: ' + '<strong>' + frequent + '</strong>';
+                   keywordsinfo += 'Overall sentiment: ' + '<strong>' + frequent + '</strong>';        
+                   $('#progressbar').hide();
                    $('#indexpage_showinfo').html(keywordsinfo);
                   }//end of else..checking if keyword is monitored or not
                 
@@ -169,6 +175,7 @@ $(document).ready(function(){
 //liupage keyword search
 
     $('#liugo').click(function(){
+        
         var keyword=$('#liuinput').val();
         if(keyword=='' || keyword==null)
         {
@@ -190,7 +197,7 @@ $(document).ready(function(){
                   if(info.length==0){
                     $('#liupage_showinfo').html('keyword is probably not started to monitor or not enough data has been gathered.');
                   }
-                
+
                   else{
                   for(var i=0;i<nob;i++){
                       if(info[i]['label']=='positive'){
@@ -229,7 +236,7 @@ $(document).ready(function(){
                             frequent='neutral';
                     }
                             
-                   keywordsinfo += 'Overall sentiment: ' + '<strong>' + frequent + '</strong>';
+                   keywordsinfo += 'Overall sentiment: ' + '<strong>' + frequent + '</strong>';         
                    $('#liupage_showinfo').html(keywordsinfo);
                   }//end of else..checking if keyword is monitored or not
                 
@@ -255,4 +262,5 @@ $(document).ready(function(){
                       return e.which !=32;
                       });
 });
+
 

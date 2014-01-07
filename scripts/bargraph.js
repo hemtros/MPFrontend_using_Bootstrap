@@ -1,3 +1,5 @@
+/* authored by Hem Sharma Acharya[hemtros@gmail.com]*/
+
 $(document).ready(function(){
     
       var datasagar=$('#bargraph_hiddenform').serializeArray();

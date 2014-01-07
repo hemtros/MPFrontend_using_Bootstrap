@@ -1,3 +1,5 @@
+/*legendjs */
+
 function legend(parent, data) {
     parent.className = 'legend';
     var datas = data.hasOwnProperty('datasets') ? data.datasets : data;

@@ -1,3 +1,4 @@
+/* authored by Hem Sharma Acharya[hemtros@gmail.com]*/
 
 
 $(document).ready(function(){
@@ -13,21 +14,23 @@ function remove(event)   {
             data: datasagar1,
             dataType: "json",
             success: function(info){
-                if(info['success']){
-                alert(info['success']);
+                
+                    if(info['success']){
+                   // alert(info['success']);
+                        location.reload();
+                    
                 }
                 else{
                     alert(info['error']);
                 }
             },
             error: function(err){
-                
+                console.log(err);
             }
     });
         
     
 }
-     
      var datasagar=$('#loggedinuser_hiddenform').serializeArray();
      $.ajax({
     			url: "http://localhost/backend/index.php/main/monitored_keyword",
@@ -50,14 +53,19 @@ function remove(event)   {
                     }
                     
                     $('.monwordstable').html(montable);
+                    $('.liusearch').show();
                     $('.minus-btn').bind('click',{username: $('#liupusername').val(), enpassword : $('#liuppassword').val()},remove);
-                   
+                     $('#liuinput').autocomplete({
+                        source: monWords
+                    });
+
                 },
                 error: function(err){
                     console.log(err);
                 }
      });
-    
+            
+                   
     
     
 });

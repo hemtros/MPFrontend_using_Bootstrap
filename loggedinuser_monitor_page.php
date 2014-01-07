@@ -1,3 +1,5 @@
+<!--authored by Hem sharma Acharya[hemtros@gmail.com] -->
+
 <?php
 
 session_start();
@@ -33,9 +35,11 @@ if(!$_SESSION['username']){
     <div class="container">
         
         <div class="row banner">
-            <div class="col-md-2">
-                <img src="images/Monitoring-icon128x128.png" />
-            </div>
+            <a href="loggedinuser_page.php">
+                <div class="col-md-2">
+                    <img src="images/Monitoring-icon128x128.png" />
+                </div>
+            </a>
             <div class="col-md-10">
                 <h1 id="websiteheading">Product Monitoring Service</h1>
                 <h2 id="tagline">(Mining Social media to monitor your product)</h2>
@@ -95,7 +99,7 @@ if(!$_SESSION['username']){
                     </div>
             <!--More info about keywords and option to delete keywords monitored directly -->
                 
-                <div class="row">
+                <div class="row" style="padding-left:15px;">
                     <div class="col-md-6 col-xs-12 showmonwords">
                       <p>Keywords currently set to monitor.<br /> Click the keyword to know its sentiment</p>
                         <ul class="monwordstable" id="monpage_monwordstable">

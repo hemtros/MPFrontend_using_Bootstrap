@@ -1,3 +1,5 @@
+/* authored by Hem Sharma Acharya[hemtros@gmail.com]*/
+
 body{
 	background:transparent url(../images/foggy_birds.png) ;
 	background-repeat: repeat;
@@ -31,8 +33,9 @@ body{
 }
 
 .navibar{
-    background-color:#00C8F8;
+   /* background-color:#00C8F8;*/
     z-index:1000;
+    background-color: #59C4C5;
 }
 
 .navibar li a{
@@ -142,7 +145,8 @@ body{
 
 
 .footer{
-    background-color: #24A7B4;
+   // background-color: #24A7B4;
+    background-color:#59C4C5;
     color:#fff;
 	font-size: 10pt;
     height:30px;
@@ -174,9 +178,9 @@ body{
 }
 
 p#indexpage_showinfo{
-    position:relative;
+    position:absolute;
     top:40%;
-    left:28%;
+    left:32%;
     width:43%;
     overflow:auto;
 }
@@ -223,5 +227,13 @@ ul#navigbar li a{
     border-style: solid;
     border-width: 0 0 0 1em;
     padding: 0 0.3em;
+}
+
+#progressbar{
+    position:absolute;
+    top:35%;
+    left:28%;
+    width:70%;
+    
 }
 

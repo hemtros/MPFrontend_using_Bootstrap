@@ -1,3 +1,5 @@
+/* authored by Hem Sharma Acharya[hemtros@gmail.com]*/
+
 div#greeting{
     height:30px;
     background-color: #0099CC;
@@ -51,7 +53,6 @@ div.addkeyworddiv{
 div.showmonwords{
     position:relative;
     top:20%;
-    left:6%;
     width:350px;
 }
 
@@ -144,12 +145,16 @@ div.showmonwords_home{
     
 }
 
+div.showmonwords_home p{
+    text-align:right;
+}
+
 
 /*for searchbox in users homepage*/
 
 p#liupage_showinfo{
     position:absolute;
-    top:40%;
+    top:35%;
     left:18%;
     width:33%;
     overflow:auto;
@@ -157,7 +162,7 @@ p#liupage_showinfo{
 
 .liusearch{
     position:absolute;
-    top: 50%;
+    top: 30%;
     left:10%;
     width:45%;
     border-radius:3px;
@@ -167,7 +172,13 @@ p#liupage_showinfo{
 .liusearchaftertype{
     top:10%;
 }
-
+#liuprogressbar{
+    position:absolute;
+    top:35%;
+    left:28%;
+    width:70%;
+    
+}
 
 canvas#piechart{
     float:right;
@@ -196,12 +207,7 @@ div.showmonwords{
     overflow:hidden;
 }
 
-/*
-img.minus-btn{
-   
-   float:right;
-}
-*/
+
 
 
 
