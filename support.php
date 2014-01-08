@@ -1,7 +1,14 @@
 <!--authored by Hem sharma Acharya[hemtros@gmail.com] -->
 
+<?php
 
-<?php session_start(); ?>
+session_start();
+
+if(!$_SESSION['username']){
+	header("location:login_page.php");
+}
+?>
+
 <!Doctype html>
 
 
@@ -14,6 +21,8 @@
      <link rel="stylesheet" type="text/css" href="styles/bootstrap.css" />
      <link rel="stylesheet" type="text/css" href="styles/forms.css" />
      <link rel="stylesheet" type="text/css" href="styles/main.css" />
+     <link rel="stylesheet" type="text/css" href="styles/loggedinuser_page.css" />
+     <link rel="stylesheet" type="text/css" href="styles/support.css" />
      <link rel="stylesheet" type="text/css" href="styles/jquery-ui.css" />
      <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
      <script type="text/javascript" src="scripts/jquery-ui.js"></script>
@@ -42,9 +51,9 @@
        
             <div class="row navibar">
                  <ul class="nav nav-pills" id="navigbar">
-                      <li class="myactive"><a href="#">Home</a></li>
+                      <li><a href="loggedinuser_page.php">Home</a></li>
                       <li><a href="login_page.php">Monitor</a></li>
-                      <li><a href="support.php">Support</a></li>
+                      <li class="myactive"><a href="support.php">Support</a></li>
                        <li><a href="aboutus.php">About Us</a></li>
                 </ul>
             </div>
@@ -54,44 +63,49 @@
                 <div class="row breaks">
                     <br /><br /><br />
                 </div>
-                <div class="row registernav">
-                    <a href="registration_page.php">
+                 <div class="row sidenav"><!--logoutnav -->
+                    <a href="logout.php">
                        <div class="col-xs-12">
-                          Register
+                          logout
                        </div>
                     </a>
-                </div>
-                <div class="row loginnav">
-                   <a href="login_page.php">
-                       <div class="col-xs-12">
-                          Login
-                       </div>
-                   </a>
-                </div>
+                </div><!-- End logoutnav -->
+               
             </div>
           
             <div class="background bg1"></div>
             <div class="col-xs-10 block content">
-                <div class="input-group search" >
-                  <input type="text" class="form-control" id="indexinput" placeholder="Enter a word to know its sentiment"/> 
-                  <span class="input-group-btn">
-                    <button class="btn btn-default" type="button" id="indexgo">Go!</button>
-                  </span>
-                </div><!-- /input-group -->
-                   
-                   <!--progressbar -->
-                   <div class="row" id="progressbar">
-                       <div class="col-xs-6">
-                   <div class="progress progress-striped active">
-                  <div class="progress-bar"  role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                  </div>
-                </div>
+              
+               <div class="row">
+                   <div class="col-xs-12">
+                        <p class="supportinfo">
+                        This web application has been developed as a Major Project for the                             completion of Bachelors of Engineering in Software Engineering from                           Pokhara University.
+                        </p>
+                        
+                        <p class="supportinfo">
+                          If you have any problem or queries regarding this web application,                            feel free to contact anyone of us or at the official email of the                                 project: support@opinionmining.webuda.com or fill the
+                          form below and submit.
+                         </p>
                    </div>
+               </div>
+               
+               <div class="row">
+                   <div class="col-xs-12">
+                       <form class="requestsupport" method="post" action="send_form_email.php">
+               
+                <label for="yourname">Name:</label>
+                <input type="text" alt="user name" id="yourname" placeholder="Your name"                         required="" name="yourname" />
+                <label for="email">Email: </label>
+                 <input type="text" alt="user email" id="youremail" placeholder="Your Email"                         required="" name="youremail" />
+                 <textarea id="comment" placeholder="Comment" name="comment" rows="4" cols="41" maxlength="1000"></textarea>
+                <button type="submit" alt="request support" id="submitbtn">Submit</button>	
+			    
+			        </form><!-- .register -->
                    </div>
-                   <!-- end progressbar-->
-                   
-                <p id="indexpage_showinfo">
-                </p>
+               </div>
+               <!--content -->
+                
+                
             </div>
             <div class="background bg2"></div>
         </div>

@@ -1,0 +1,31 @@
+.partnerstag{
+    background-color:#5b71ad;
+    width:100%;
+    min-height:45px;
+    padding:0px;
+    margin: 0px;
+    color:#f8f8f8;
+    font-size:2em;
+}
+
+.content{
+    //overflow:hidden;
+}
+.content{
+    padding:0px;
+}
+
+.photos{
+    margin:6px;
+}
+.hemsa,.bika,.amirb{
+    font-family:fantasy,sans-serif,serif;
+    font-size:1.5em;
+    color:#847373;
+}
+
+.hemsa p,.bika p, .amirb p{
+    font-family:cursive;
+    font-size:0.8em;
+    color:red;
+}

@@ -1,5 +1,10 @@
-.register,
-.login {
+.supportinfo{
+    padding:8px;
+}
+
+
+
+.requestsupport{
 	/* Structure */
 	width: 300px;
 	padding: 15px;
@@ -20,8 +25,8 @@
     outline: none;
 }
 
-.register h1,
-.login h1 {
+.requestsupport h1,
+{
 	/* Structure */
 	margin-top: 0;
 	margin-bottom: 15px;
@@ -35,8 +40,8 @@
     /*text-align: center;*/
 }
 
-.register input,
-.login input {
+.requestsupport input,
+.requestsupport textarea{
 	/* Structure */
 	margin: 5px 0;
 	padding: 8px;
@@ -58,8 +63,8 @@
          -o-transition: all .25s ease-in-out;
 }
 
-.register input:focus,
-.login input:focus {
+.requestsupport input:focus,
+{
 	/* Style */
     border:1px solid #fafafa;
     outline: none;
@@ -68,8 +73,7 @@
        		box-shadow: 0 0 5px #007eff;   
 }		
 
-.register button,
-.login button {
+.requestsupport button {
 	/* Structure */
 	margin: 15px 0 0 0;
 	padding: 8px 6px;			
@@ -79,13 +83,12 @@
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
     font-weight: 600;
     font-size: 1.2em;
-    color: #818080;
+    color: #fff;
     text-shadow: 0 -1px 0 rgba(0,0,0,.4);
     
     /* Style */
     //background-color: #2493ff;
-    //background-color: #956c65;
-    background-color:#e2e2e2;
+    background-color: #EAE2B4;
 	//background-image: linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
     border: 1px solid #EAE2B4;
 	border-radius: 3px;
@@ -106,16 +109,14 @@
          -o-transition: background-color .15s ease-in-out;	  						  
 }
 
-.register button:hover,
-.login button:hover {
+.requestsupport button:hover {
 	/* Style */
   	background-color: #59C4C5;
-    color:#fff;
         //border-color: #EAE2B4;
 }
 
-.register button:active,
-.login button:active {
+.requestsupport button:active
+ {
 	/* Structure */
 	position: relative;
 	top: 3px;
@@ -128,8 +129,7 @@
     $LABELS
 \*------------------------------------*/
 
-.register label,
-.login label {
+.requestsupport label {
 	/* To Show/Hide, simply toggle display to block or none */
 	display: none;
 	
@@ -147,8 +147,7 @@
 \*------------------------------------*/
 
 /* The 'Lock' */
-.register .secure,
-.login .secure {
+.requestsupport .secure {
 	float: right;
 }
 
@@ -164,19 +163,18 @@
     $GREEN
 \*------------------------------------*/
 
-.register.green button,
-.login.green button {
+.requestsupport.green button {
     background-color: #08de06;
 	border: 1px solid #08de06;
 }
 
-.register.green button:hover,
+.requestsupport.green button:hover,
 .login.green button:hover {
 	background-color: #08cd05;
 	border: 1px solid #08cd05;
 }
 
-.register.green input:focus,
+.requestsupport.green input:focus,
 .login.green input:focus {
 	 -webkit-box-shadow: 0 0 6px #08de06;
      	-moz-box-shadow: 0 0 5px #08de06;
@@ -188,19 +186,19 @@
     $RED
 \*------------------------------------*/
 
-.register.red button,
+.requestsupport.red button,
 .login.red button {
     background-color: #e00;
 	border: 1px solid #e00;
 }
 
-.register.red button:hover,
+.requestsupport.red button:hover,
 .login.red button:hover {
 	background-color: #d00;
 	border: 1px solid #d00;
 }
 
-.register.red input:focus,
+.requestsupport.red input:focus,
 .login.red input:focus {
 	 -webkit-box-shadow: 0 0 6px #e00;
      	-moz-box-shadow: 0 0 5px #e00;

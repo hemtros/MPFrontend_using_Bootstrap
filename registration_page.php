@@ -8,6 +8,7 @@
      <title>Product Monitoring Service</title>
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
      <link rel="stylesheet" type="text/css" href="styles/bootstrap.css" />
      <link rel="stylesheet" type="text/css" href="styles/forms.css" />
      <link rel="stylesheet" type="text/css" href="styles/main.css" />
@@ -33,9 +34,9 @@
             <div class="row navibar" id="navigbar">
                  <ul class="nav nav-pills">
                       <li><a href="index.php">Home</a></li>
-                      <li><a href="#">Monitor</a></li>
-                      <li><a href="#">Support</a></li>
-                       <li><a href="#">About Us</a></li>
+                      <li><a href="loggedinuser_monitor_page.php">Monitor</a></li>
+                      <li><a href="support.php">Support</a></li>
+                       <li><a href="aboutus.php">About Us</a></li>
                       
                 </ul>
             </div>

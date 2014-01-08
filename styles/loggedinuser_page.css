@@ -43,8 +43,10 @@ div.addkeyworddiv{
 }
 
 #showinfo{
-    text-align:center;
-    width:70%;
+    text-align:left;
+    width:100%;
+   /* word-wrap:break-word;*/
+    word-break:break-all;
     overflow:auto;
 }
 

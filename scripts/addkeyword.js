@@ -100,7 +100,7 @@ $(document).ready(function(){
                           myflag=1;
                             }
                             else{
-                                 $('#showinfo').html("keywords " + already_set_keywords.join(',') + " are already set to monitor" );
+                                 $('#showinfo').html("keywords: " + already_set_keywords.join(',') + " are already set to monitor" );
                         //console.log("keywords " + already_set_keywords.join(',') + " are already set to monitor");
                           myflag=1;
                             }
