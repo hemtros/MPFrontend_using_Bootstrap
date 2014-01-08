@@ -78,10 +78,11 @@
 <!--
 			     <label for="phoneno">Phone no.</label>
 			 <input type="tel" pattern="^98[\d]{8}" id="phoneno" placeholder="Phone no: 9845091438" required=""  name="phone" title="only ntc and ncell number"/>
-			 
 -->
+			 
 			    <label for="email">Email</label>
 			    <input type="email" id="email" placeholder="you@example.com" name="email" required="" />
+			    
 			    					
 			    <button type="submit" alt="Sign Up" id="button">Sign up for free!</button>	
 			    

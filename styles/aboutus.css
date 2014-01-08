@@ -5,7 +5,7 @@
     padding:0px;
     margin: 0px;
     color:#f8f8f8;
-    font-size:2em;
+    font-size:1.4em;
 }
 
 .content{
@@ -27,5 +27,5 @@
 .hemsa p,.bika p, .amirb p{
     font-family:cursive;
     font-size:0.8em;
-    color:red;
+    color:black;
 }

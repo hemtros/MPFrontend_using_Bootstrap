@@ -66,7 +66,16 @@ $(document).ready(function(){
                     var neu=[];
                     
                     for(var i=0;i<no;i++)
-                    {
+                    {       
+//                            var etime=info[i].time;
+//                            var date = new Date(etime*1000);
+//                            var year=date.getFullYear();
+//                            var month=date.getMonth();
+//                            var day=date.getDay();
+//                            var hour=date.getHours();
+//                            var minute=date.getMinutes();
+//                            var second=date.getSeconds();
+//         var time= year + "/" + month + "/" + day + "/" + hour + ":" + minute + ":" + second;
                             labels[i] = info[i].time;
                             pos[i] =  info[i].pos;
                             neg[i] = info[i].neg;
