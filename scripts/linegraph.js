@@ -38,6 +38,7 @@ $(document).ready(function(){
           $('#graphmainDiv').removeClass('graphBody');
           $('#legendandimageDiv').html('');
           $('#linegraphDiv').html('');
+          $('#linelegend').html('');
       }
       var keyword=$(this).html();
        $.ajax({
