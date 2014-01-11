@@ -22,6 +22,8 @@ if(!$_SESSION['username']){
      <link rel="stylesheet" type="text/css" href="styles/forms.css" />
      <link rel="stylesheet" type="text/css" href="styles/main.css" />
      <link rel="stylesheet" type="text/css" href="styles/loggedinuser_page.css" />
+     <script type="text/javascript" src="scripts/typeface-0.15.js"></script>
+    <script type="text/javascript" src="scripts/aleo_bold.typeface.js"></script>
      <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
      <script type="text/javascript" src="scripts/bootstrap.js"></script>
      <script type="text/javascript" src="scripts/myscript.js"></script>
@@ -42,8 +44,8 @@ if(!$_SESSION['username']){
                 </div>
             </a>
             <div class="col-md-10">
-                <h1 id="websiteheading">Product Monitoring Service</h1>
-                <h2 id="tagline">(Mining Social media to monitor your product)</h2>
+                <h1 id="websiteheading" class="typeface-js" style="font-family:Aleo">Product Monitoring Service</h1>
+                <h2 id="tagline" class="typeface-js" style="font-family:Optimer;">(Mining Social media to monitor your product)</h2>
             </div>
         </div>
         
@@ -93,7 +95,7 @@ if(!$_SESSION['username']){
             
             <div class="background bg1"></div>
             <div class="col-xs-10 content block" id="liumcontentbody" >  <!--main content area -->
-                    <div id="greeting">
+                    <div class="greeting" class="typeface-js" style="font-family:Optimer;font-style:italic;">
                         <?php 
                           echo $_SESSION['username'];
                         ?>

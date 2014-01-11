@@ -54,6 +54,7 @@ function remove(event)   {
                     
                     $('.monwordstable').html(montable);
                     $('.liusearch').show();
+                    $('#liuinput').focus();
                     $('.minus-btn').bind('click',{username: $('#liupusername').val(), enpassword : $('#liuppassword').val()},remove);
                      $('#liuinput').autocomplete({
                         source: monWords

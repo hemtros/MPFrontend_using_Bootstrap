@@ -33,7 +33,8 @@ $(document).ready(function(){
 
 $(document).ready(function(){
        $('#bargraph_monwordstable').on('click','li',function(e){
-           
+       
+        $('.graph_showerror').html('');
       if($('#bargraphmainDiv').hasClass('graphBody')){
           $('#bargraphmainDiv').removeClass('graphBody');
           $('#barlegendandimageDiv').html('');
@@ -47,8 +48,15 @@ $(document).ready(function(){
     			dataType: "json",
                 success: function(info){
                     
+                    if(info.length==0){
+                        $('.graph_showerror').html('Not enough data to plot bargraph');
+                        location.href='#';
+                    }
+                    
+                    else{
+                        
                    $('#bargraphmainDiv').addClass('graphBody');
-                   
+                   $('#barlegendandimageDiv').append('keyword: ' + keyword)
                     if(!$('*').hasClass('topImage')){
                    $('#barlegendandimageDiv').append("<a href='#'><img src='images/toTop_32x32.png' class='topImage' /></a>");
                     }
@@ -102,7 +110,7 @@ $(document).ready(function(){
 	                    var myNewChart = new Chart(ctx).Bar(bargraphData);
                         legend(document.getElementById('barlegend'),bargraphData);
                         
-                   
+                    }
              
                 },
                 error: function(err){

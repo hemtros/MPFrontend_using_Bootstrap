@@ -33,7 +33,8 @@ $(document).ready(function(){
 
 $(document).ready(function(){
        $('#linegraph_monwordstable').on('click','li',function(e){
-           
+        
+           $('.graph_showerror').html('');
       if($('#graphmainDiv').hasClass('graphBody')){
           $('#graphmainDiv').removeClass('graphBody');
           $('#legendandimageDiv').html('');
@@ -47,10 +48,17 @@ $(document).ready(function(){
     			data: {q: keyword},
     			dataType: "json",
                 success: function(info){
+
+                    if(info.length==0){
+                        $('.graph_showerror').html('Not enough data to plot linegraph');
+                        location.href='#';
+                    }
                     
-                    
+                    else{
+                        
                     $('#graphmainDiv').addClass('graphBody');
-                  
+                     $('#legendandimageDiv').append('keyword: ' + keyword)
+
                     if(!$('*').hasClass('topImage')){
                    $("#legendandimageDiv").append("<a href='#'><img src='images/toTop_32x32.png' class='topImage' /></a>");
                     }
@@ -116,7 +124,7 @@ $(document).ready(function(){
 	                    var myNewChart = new Chart(ctx).Line(lineGraphData);
                         legend(document.getElementById('linelegend'),lineGraphData);
                         
-                   
+                }
              
                 },
                 error: function(err){

@@ -122,7 +122,7 @@ $(document).ready(function(){
                         keywordsinfo += 'positive: ' + info.summary.pos + "<br />";
                         keywordsinfo += 'Negative: ' + info.summary.neg + "<br />";
                         keywordsinfo += 'Neutral: ' + info.summary.neutral + "<br />";
-                        keywordsinfo += "Label: " + info.summary.label;
+                        keywordsinfo += "Label: " + '<strong>' + info.summary.label + '</strong>';
                        $(indexpage_showinfo).html(keywordsinfo);
                       $('#progressbar').hide();
                       //keywordsinfo += info['summary']['pos'];
@@ -144,10 +144,12 @@ $(document).ready(function(){
 
     $('#liugo').click(function(){
         
+        $('#liuprogressbar').show();
         var keyword=$('#liuinput').val();
         if(keyword=='' || keyword==null)
         {
             $('#liupage_showinfo').html('Enter a keyword first. e.g.apple');
+            $('#liuprogressbar').hide();
         }
         
         else{
@@ -164,6 +166,7 @@ $(document).ready(function(){
                   var nob=info.length;
                   if(info.length==0){
                     $('#liupage_showinfo').html('keyword is probably not started to monitor or not enough data has been gathered.');
+                      $('#liuprogressbar').hide();
                   }
 
                   else{
@@ -181,7 +184,7 @@ $(document).ready(function(){
                   }
                     
                   var keywordsinfo = "";
-                  keywordsinfo += "keyword: " + keyword + "<br />";
+                  keywordsinfo += "keyword: " + '<strong>' + keyword + '</strong>' + "<br />";
                   keywordsinfo += "Total times Data analysed and added: " + info.length + "<br />";
                   keywordsinfo += "Positive sentiment: " + positive + " times" + "<br />";
                   keywordsinfo += "Negative sentiment: " + negative + " times" + "<br />";
@@ -204,8 +207,9 @@ $(document).ready(function(){
                             frequent='neutral';
                     }
                             
-                   keywordsinfo += 'Overall sentiment: ' + '<strong>' + frequent + '</strong>';         
+                   keywordsinfo += 'Overall sentiment: ' + '<strong style="font-size:1.5em;">' + frequent + '</strong>';         
                    $('#liupage_showinfo').html(keywordsinfo);
+                      $('#liuprogressbar').hide();
                   }//end of else..checking if keyword is monitored or not
                 
                 },

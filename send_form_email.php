@@ -1,9 +1,13 @@
+
+ <!--authored by Hem sharma Acharya[hemtros@gmail.com] -->
+
+
 <?php
 
 session_start();
 
 if(!$_SESSION['username']){
-	header("location:login_page.php");
+        header("location:login_page.php");
 }
 ?>
  
@@ -135,10 +139,8 @@ $headers = 'From: '.$email_from."\r\n".
  
  
 <!-- include your own success html here -->
- <!--authored by Hem sharma Acharya[hemtros@gmail.com] -->
 
 
-<?php session_start(); ?>
 <!Doctype html>
 
 
@@ -153,6 +155,8 @@ $headers = 'From: '.$email_from."\r\n".
      <link rel="stylesheet" type="text/css" href="styles/main.css" />
      <link rel="stylesheet" type="text/css" href="styles/support.css" />
      <link rel="stylesheet" type="text/css" href="styles/jquery-ui.css" />
+     <script type="text/javascript" src="scripts/typeface-0.15.js"></script>
+      <script type="text/javascript" src="scripts/aleo_bold.typeface.js"></script>
      <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
      <script type="text/javascript" src="scripts/jquery-ui.js"></script>
      <script type="text/javascript" src="scripts/bootstrap.js"></script>
@@ -172,8 +176,8 @@ $headers = 'From: '.$email_from."\r\n".
                 <img src="images/Monitoring-icon128x128.png" />
             </div>
             <div class="col-md-10">
-                <h1 id="websiteheading">Product Monitoring Service</h1>
-                <h2 id="tagline">(Mining Social media to monitor your product)</h2>
+                <h1 id="websiteheading" class="typeface-js" style="font-family:Aleo">Product Monitoring Service</h1>
+                <h2 id="tagline" class="typeface-js" style="font-family:Optimer;">(Mining Social media to monitor your product)</h2>
             </div>
         </div>
         

@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
     $('#progressbar').hide();
-    
+    $('#liuprogressbar').hide();
     $('.liusearch').hide();
     
  var datasagar;  

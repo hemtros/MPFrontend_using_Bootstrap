@@ -1,11 +1,12 @@
 /* authored by Hem Sharma Acharya[hemtros@gmail.com]*/
 
-div#greeting{
+div.greeting{
     height:30px;
     background-color: #0099CC;
     width: 100%;
     padding-left:4px;
     padding-right:0px;
+    font-size:1.3em;
 }
 
 div.col-xs-10{
@@ -43,7 +44,7 @@ div.addkeyworddiv{
 }
 
 #showinfo{
-    text-align:left;
+    text-align:center;
     width:100%;
    /* word-wrap:break-word;*/
     word-break:break-all;
@@ -65,26 +66,24 @@ ul.monwordstable{
     width: 250px;
     list-style:none;
     padding-left:0px;
-    font-size:1.3em;
+    font-size:1.4em;
 }
 .monwordstable li{
     background-color: #4fa2ad;
    // border-bottom: 2px dotted teal;
     color:white;
     padding-left:6px;
+    display:block;
+    text-decoration:none;
+    font-family:verdana,sans-serif,serif;
 }
 
-.monwordstable li{
-    display:block;
-    color:white;
-    text-decoration:none;
-}
 
 .monwordstable li:hover{
     display:block;
     background-color:#35b5b5;
     color:black;
-    text-align:center;
+    /*text-align:center;*/
     text-decoration:none;
     font-family: cursive;
     cursor:hand;
@@ -115,8 +114,10 @@ ul.monwordstable{
 
 div#startmonitoring{
     float:right;
-    position:relative;
-    top:18%;
+    position:absolute;
+     top: 25%;
+    left:65%;
+   
     width:34%;
     overflow:auto;
     
@@ -158,7 +159,7 @@ div.showmonwords_home p{
 
 p#liupage_showinfo{
     position:absolute;
-    top:35%;
+    top:25%;
     left:18%;
     width:33%;
     overflow:auto;
@@ -178,8 +179,8 @@ p#liupage_showinfo{
 }
 #liuprogressbar{
     position:absolute;
-    top:35%;
-    left:28%;
+    top:23%;
+    left:16%;
     width:70%;
     
 }
@@ -211,7 +212,9 @@ div.showmonwords{
     overflow:hidden;
 }
 
-
-
-
+.graph_showerror{
+    position:absolute;
+    top:20%;
+    left:65%;
+}
 

@@ -15,6 +15,9 @@
      <link rel="stylesheet" type="text/css" href="styles/forms.css" />
      <link rel="stylesheet" type="text/css" href="styles/main.css" />
      <link rel="stylesheet" type="text/css" href="styles/jquery-ui.css" />
+     <script type="text/javascript" src="scripts/typeface-0.15.js"></script>
+    <script type="text/javascript" src="scripts/aleo_bold.typeface.js"></script>
+     <script type="text/javascript" src="scripts/optimer_bold_italic.typeface.js"></script>
      <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
      <script type="text/javascript" src="scripts/jquery-ui.js"></script>
      <script type="text/javascript" src="scripts/bootstrap.js"></script>
@@ -34,8 +37,8 @@
                 <img src="images/Monitoring-icon128x128.png" />
             </div>
             <div class="col-md-10">
-                <h1 id="websiteheading">Product Monitoring Service</h1>
-                <h2 id="tagline">(Mining Social media to monitor your product)</h2>
+                <h1 id="websiteheading" class="typeface-js" style="font-family:Aleo">Product Monitoring Service</h1>
+                <h2 id="tagline" class="typeface-js" style="font-family:Optimer;">(Mining Social media to monitor your product)</h2>
             </div>
         </div>
         
@@ -83,7 +86,9 @@
                    <div class="row" id="progressbar">
                        <div class="col-xs-6">
                    <div class="progress progress-striped active">
-                  <div class="progress-bar"  role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                  <div class="progress-bar"  role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                 <p>Mining twitter and finding sentiment</p>
+
                   </div>
                 </div>
                    </div>
