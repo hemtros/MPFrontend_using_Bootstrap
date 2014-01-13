@@ -25,7 +25,7 @@ if(!$_SESSION['username']){
      <link rel="stylesheet" type="text/css" href="styles/jquery-ui.css" />
      <script type="application/javascript" src="scripts/typeface-0.15.js"></script>
      <script type="text/javascript" src="scripts/aleo_bold.typeface.js"></script>
-     <script type="text/javascript" src="scripts/gentilis_regular.typeface.js"></script>
+     <script type="text/javascript" src="scripts/optimer_bold_italic.typeface.js"></script>
      <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
      <script type="text/javascript" src="scripts/bootstrap.js"></script>
      <script type="text/javascript" src="scripts/myscript.js"></script>

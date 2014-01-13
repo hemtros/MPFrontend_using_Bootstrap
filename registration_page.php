@@ -14,6 +14,7 @@
      <link rel="stylesheet" type="text/css" href="styles/main.css" />
      <script type="text/javascript" src="scripts/typeface-0.15.js"></script>
      <script type="text/javascript" src="scripts/aleo_bold.typeface.js"></script>
+    <script type="text/javascript" src="scripts/optimer_bold_italic.typeface.js"></script>
      <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
      <script type="text/javascript" src="scripts/bootstrap.js"></script>
      <script type="text/javascript" src="scripts/myscript.js"></script>
@@ -23,8 +24,8 @@
     <div class="container">
         
         <div class="row banner">
-            <div class="col-md-2">
-                <img src="images/Monitoring-icon128x128.png" />
+           <div class="col-md-2">
+               <a href="index.php"> <img src="images/Monitoring-icon128x128.png" /></a>
             </div>
             <div class="col-md-10">
                 <h1 id="websiteheading" class="typeface-js" style="font-family:Aleo">Product Monitoring Service</h1>
@@ -73,7 +74,7 @@
 			    <label for="username">Username</label>
 			    <input type="text" alt="user name" id="username" placeholder="Username" required=""                  name="username" />
 			    <label for="password">Password</label>
-			    <input type="password" alt="password" id="password" placeholder="Password" required=""                 name="password" maxlength="15" />
+			    <input type="password" alt="password" id="password" placeholder="Password" required=""                 name="password" maxlength="15"/>
 			    
 			    <label for="passwordagain">Password Again</label>
                 <input type="password" alt="password again" id="passwordagain" placeholder="Password Again" required="" maxlength="15" />                   

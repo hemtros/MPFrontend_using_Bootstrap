@@ -115,6 +115,9 @@ $(document).ready(function(){
                 },
                 error: function(err){
                     console.log(err);
+                     console.log(err);
+                     $('.graph_showerror').html("Couldn't plot graph due to connectivity issue or other problems");
+                     location.href='#';
                 }
        });
     });

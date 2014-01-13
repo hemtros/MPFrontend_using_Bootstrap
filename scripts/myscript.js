@@ -9,9 +9,17 @@ $(document).ready(function() {
  
 $('.register').submit(function(e) {
         e.preventDefault();
-     if($('#password').val()!=$('#passwordagain').val()){
+     var password=$('#password').val();
+     var passwordagain=$('#passwordagain').val();
+     if(password!=passwordagain){
         alert("passwords don't match");
      }
+    
+    else if(password.length<=6){
+                
+            alert('password must be of minimum 7 characters');
+            
+        }
     
     else{
     
@@ -102,7 +110,10 @@ $(document).ready(function(){
 });
 
 
-
+$(document).ready(function(){
+   
+    $('#username').focus();
+});
 
 
 

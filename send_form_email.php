@@ -157,6 +157,7 @@ $headers = 'From: '.$email_from."\r\n".
      <link rel="stylesheet" type="text/css" href="styles/jquery-ui.css" />
      <script type="text/javascript" src="scripts/typeface-0.15.js"></script>
       <script type="text/javascript" src="scripts/aleo_bold.typeface.js"></script>
+    <script type="text/javascript" src="scripts/optimer_bold_italic.typeface.js"></script>
      <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
      <script type="text/javascript" src="scripts/jquery-ui.js"></script>
      <script type="text/javascript" src="scripts/bootstrap.js"></script>

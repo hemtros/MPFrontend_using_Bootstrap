@@ -2,6 +2,15 @@
 
 
 <?php session_start(); ?>
+
+<?php
+if(isset($_SESSION['username'])){
+    
+    header("location:loggedinuser_page.php");
+}
+
+?>
+
 <!Doctype html>
 
 

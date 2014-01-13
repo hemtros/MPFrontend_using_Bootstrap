@@ -3,6 +3,10 @@
 
 $(document).ready(function(){
     
+/*to ensure progressbar dont show up while page is loading */
+$('#liusearch').hide();
+/*..........................................*/
+    
 function remove(event)   {
    var keyword=this.id;
         var datasagar1=event.data;
@@ -56,6 +60,7 @@ function remove(event)   {
                     $('.liusearch').show();
                     $('#liuinput').focus();
                     $('.minus-btn').bind('click',{username: $('#liupusername').val(), enpassword : $('#liuppassword').val()},remove);
+                    
                      $('#liuinput').autocomplete({
                         source: monWords
                     });

@@ -26,6 +26,7 @@ $('#startmonitoring').click(function(){
                             
                              
                                for(var v=0;v<nowords;v++) {
+                                   var cherr=true;
                                    $.ajax({
                                        url: "http://majoropinionmining.appspot.com/monitor",
                                        data: {operation: 'add',word: monwords[v] },
@@ -50,8 +51,13 @@ $('#startmonitoring').click(function(){
                                        },
                                        error: function(er){
                                            console.log(er);
+                                           cherr=false;
+                                            $('#showinfo1').html("Couldn't start/update your monitored keyword list to the server");
+                                           
                                        }
                                    });
+                                   if(cherr==false)
+                                       break;
                             }//for loop ends
                             
           }//comma checking if ends
@@ -69,8 +75,10 @@ $('#startmonitoring').click(function(){
                                                $('#showinfo1').html(suc['error']);
                                            }
                                        },
-                                       error: function(err){
-                                           console.log(err);
+                                       error: function(erro){
+                                           
+                                        $('#showinfo1').html("Couldn't start/update your monitored keyword list to the server");
+                                           console.log(erro);
                                        }
                         });
                         

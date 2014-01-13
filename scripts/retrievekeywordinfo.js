@@ -1,7 +1,9 @@
 /* authored by Hem Sharma Acharya[hemtros@gmail.com]*/
 
 $(document).ready(function(){
-   
+  
+/* to ensure progressbar dont show up at page load */
+    $('#progressbar').hide();
    $('#monpage_monwordstable').on('click','li',function(e){
 
       var keyword=$(this).html();
@@ -81,6 +83,8 @@ $(document).ready(function(){
                 
                 },
                 error: function(err){
+                    
+                    $('.keywordsinfo').html('Failed to retrieve information due to network<br /> connectivity issue or other problem.')
                     console.log(err);
                 }
 });
@@ -123,7 +127,7 @@ $(document).ready(function(){
                         keywordsinfo += 'Negative: ' + info.summary.neg + "<br />";
                         keywordsinfo += 'Neutral: ' + info.summary.neutral + "<br />";
                         keywordsinfo += "Label: " + '<strong>' + info.summary.label + '</strong>';
-                       $(indexpage_showinfo).html(keywordsinfo);
+                       $('#indexpage_showinfo').html(keywordsinfo);
                       $('#progressbar').hide();
                       //keywordsinfo += info['summary']['pos'];
                         
@@ -133,6 +137,9 @@ $(document).ready(function(){
                 },
                     
                     error: function(err){
+                        
+                        $('#indexpage_showinfo').html('Failed to retrieve information due to network<br /> connectivity issue or other problem.')
+                        $('#progressbar').hide();
                         console.log(err);
                     }
     });//end ajax
@@ -215,6 +222,9 @@ $(document).ready(function(){
                 },
            
                 error: function(err){
+                    
+                    $('#liupage_showinfo').html('Failed to retrieve information due to network<br /> connectivity issue or other problem.');
+                    $('#liuprogressbar').hide();
                     console.log(err);
                 }
 });
